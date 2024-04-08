@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function truncate(str , maxLength) {
+        if(str.length > maxLength) {
+            return str.substring(0, maxLength) + "..."
+        } else {
+            return str;
+        }
+      }
+      //"What I'd like to te…"
+      alert(truncate("What I'd like to tell on this topic is:", 20));
+
+      // "Hi everyone!"
+      alert(truncate("Hi everyone!", 20));
+    </script>
+  </body>
+</html>
