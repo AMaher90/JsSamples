@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let salaries = {
+        John: 100,
+        Pete: 300,
+        Mary: 250,
+      };
+
+      function topSalary(salaries) {
+        let topName = "";
+        let topSalary = 0;
+        for (let [key, value] of Object.entries(salaries)) {
+          if (value > topSalary) {
+            topSalary = value;
+            topName = key;
+          }
+        }
+
+        alert(topName);
+        alert(topSalary);
+      }
+
+      topSalary(salaries);
+    </script>
+  </body>
+</html>
