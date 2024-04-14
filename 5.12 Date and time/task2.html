@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getWeekDay(date) {
+        // const day = date.getDay();
+        // switch (day) {
+        //   case 0:
+        //     return "SUN";
+        //     break;
+        //   case 1:
+        //     return "MO";
+        //     break;
+        //   case 2:
+        //     return "TU";
+        //     break;
+        //   case 3:
+        //     return "WE";
+        //     break;
+        //   case 4:
+        //     return "TH";
+        //     break;
+        //   case 5:
+        //     return "FR";
+        //     break;
+        //   case 6:
+        //     return "SA";
+        //     break;
+        //   default:
+        //     return "Error";
+        // }
+
+        let days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+        return days[date.getDay()];
+      }
+      let date = new Date(2012, 0, 3); // 3 Jan 2012
+      alert(getWeekDay(date)); // should output "TU"
+    </script>
+  </body>
+</html>
