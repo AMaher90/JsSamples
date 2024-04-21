@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function delay(f, ms) {
+        return function (...args) {
+          let savedThis = this; // store this into an intermediate variable
+          setTimeout(function () {
+            f.apply(savedThis, args); // use it here
+          }, ms);
+        };
+      }
+
+      let f1000 = delay(alert, 1000);
+
+      f1000("test");
+    </script>
+  </body>
+</html>
